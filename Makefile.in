@@ -37,7 +37,10 @@ LD=$(LINKER)
 AR=$(ARCHIVER)
 MAKE=$(BUILDER)
 
-CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -Werror  -nostdlib -nostdinc #-Wno-long-long  
-CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables -fno-builtin
+CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -Werror -ffreestanding #-Wno-long-long  
+CFLAGS += -fomit-frame-pointer
 
+
+#If don't success, Try below
+#CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -Werror  -nostdlib -nostdinc -fomit-frame-pointer -fno-asynchronous-unwind-tables -fno-builtin
 #CFLAGS = "-march=i386  -mpreferred-stack-boundary=2"
