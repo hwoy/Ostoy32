@@ -1,9 +1,9 @@
 
 
-libdir =-L../../lib -L../../lowlib
+LIBDIR =-L../../lib -L../../lowlib
 
-includedir =-I../../include
+INCLUDEDIR =-I../../include
 
-LDFLAGS = $(libdir) -nostdlib
+LDFLAGS = $(LIBDIR) -nostdlib
 
-CFLAGS += $(includedir)
+CFLAGS += $(INCLUDEDIR)
