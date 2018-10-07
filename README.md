@@ -8,7 +8,7 @@ I hope that you may enjoy with it.
 ### Overview
 - No special library
 - No magic
-- Raw image can be run on qenu
+- Raw image can be run on QEMU
 - provides partial in-house libc interface for user mode. It means that you can port your simple ansi-C program to run on Ostoy32.
 - Provides IRQ, Time-tick, keyboard, VGA
 - No user mode , kernel mode only
