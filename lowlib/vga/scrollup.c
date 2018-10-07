@@ -5,7 +5,7 @@
 void scrollup(unsigned int nrow)
 {
 	unsigned int i,j,m,n;
-	unsigned tmp;
+	unsigned short tmp;
 
 	for(i=nrow,m=0;i<ROW;i++,m++)
 	{
