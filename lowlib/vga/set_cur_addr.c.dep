@@ -1,0 +1,8 @@
+#include "vga.h"
+#include "asm.h"
+
+
+void set_cur_addr(unsigned int addr)
+{
+  set_cur(addr%COL,addr/COL);
+}

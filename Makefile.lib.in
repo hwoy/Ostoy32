@@ -1,0 +1,9 @@
+
+
+libdir =-L../../lib -L../../lowlib
+
+includedir =-I../../include
+
+LDFLAGS = $(libdir) -nostdlib
+
+CFLAGS += $(includedir)

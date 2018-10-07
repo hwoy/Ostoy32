@@ -1,0 +1,43 @@
+OBJTYPE=elf_i386_sol2
+ARTARGET=elf32-i386-sol2
+
+#elf_i386_sol2 = solaris
+#elf_i386_fbsd = freebsd
+#elf_i386 = linux
+
+
+
+
+
+########## Edit for your system but this project for x86 32 bits ############
+STD=c99
+#c89 = ANSI c
+#c99 = ISO c99 (**** recomended for more features ****)
+
+
+OPT=-Os
+#-Os = for less size
+#-O2 = for more speed
+
+BIT=32
+ARCH=i386
+
+
+CCOMPILER=gcc -m$(BIT)
+ASSEMBLER= $(CCOMPILER) -c -x assembler-with-cpp -Wa,--divide
+LINKER=gld -m $(OBJTYPE)
+ARCHIVER= gar --target=$(ARTARGET)
+BUILDER=gmake
+
+########## Edit for your system but this project for x86 32 bits ############ 
+
+CC=$(CCOMPILER)
+AS=$(ASSEMBLER)
+LD=$(LINKER)
+AR=$(ARCHIVER)
+MAKE=$(BUILDER)
+
+CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -Werror  -nostdlib -nostdinc #-Wno-long-long  
+CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables -fno-builtin
+
+#CFLAGS = "-march=i386  -mpreferred-stack-boundary=2"

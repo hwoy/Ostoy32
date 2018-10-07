@@ -1,0 +1,16 @@
+#include "vga.h"
+#include "asm.h"
+
+
+void clrscr(void)
+{
+	unsigned int i,j;
+	for(i=0;i<ROW;i++)
+	{
+		for(j=0;j<COL;j++)
+		{
+			vidmem[i*COL+j]=vidmem[i*COL+j]&0xff00;
+		}
+	}
+	set_cur(0,0);
+}

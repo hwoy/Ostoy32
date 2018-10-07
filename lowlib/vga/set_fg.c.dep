@@ -1,0 +1,14 @@
+#include "vga.h"
+
+
+void set_fg(unsigned short color,unsigned int x1,unsigned int y1,unsigned int x2,unsigned int y2)
+{
+	unsigned int j,i;
+	for(i=y1;i<=y2;i++)
+	{
+		for(j=x1;j<=x2;j++)
+		{
+			vidmem[j+i*COL]=(vidmem[j+i*COL]&0xf0ff)|(color<<8);
+		}
+	}
+}
