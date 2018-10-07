@@ -1,19 +1,15 @@
 include Makefile.in
 
 NAME =Ostoy32
-
-BIN1 = $(NAME).hdd
-BIN2 = $(NAME).img
+BIN = $(NAME).img
 INSTALLDIR =/data/mae
 
 .PHONY: all clean update install uninstall lib lowlib tools
 
-all:	$(BIN1) $(BIN2)
-$(BIN1): lib lowlib mbr/mbr kernel32/kernel32 app/app
-	cat mbr/mbr kernel32/kernel32 app/app > $(BIN1)
+all:	$(BIN)
 
-$(BIN2): lib lowlib mbr/mbr kernel32/kernel32  app/app
-	cat mbr/mbr kernel32/kernel32  app/app > $(BIN2)
+$(BIN): lib lowlib mbr/mbr kernel32/kernel32  app/app
+	cat mbr/mbr kernel32/kernel32  app/app > $(BIN)
 
 mbr/mbr:
 	$(MAKE) -C mbr
@@ -22,11 +18,11 @@ kernel32/kernel32: lib lowlib
 	$(MAKE) -C kernel32
 	
 	
-app/app: lib lowlib tools
+app/app: lib lowlib
 	$(MAKE) -C app
 	
 clean:
-	rm -f $(BIN1) $(BIN2) *~ && $(MAKE) -C mbr clean  && $(MAKE) -C kernel32 clean && \
+	rm -f $(BIN) *~ && $(MAKE) -C mbr clean  && $(MAKE) -C kernel32 clean && \
 	$(MAKE) -C app clean && $(MAKE) -C lib clean && \
 	$(MAKE) -C lowlib clean && $(MAKE) -C tools clean
 
@@ -42,11 +38,11 @@ lowlib:
 update:
 	$(MAKE) clean && $(MAKE)
 
-install: $(BIN1) $(BIN2)
-	cp $(BIN1) $(INSTALLDIR) && cp $(BIN2) $(INSTALLDIR)
+install: $(BIN)
+	cp $(BIN) $(INSTALLDIR)
 
 uninstall:
-	rm -f $(INSTALLDIR)/$(BIN1)
+	rm -f $(INSTALLDIR)/$(BIN)
 
 
 	
