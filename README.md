@@ -9,7 +9,7 @@ I hope that you may enjoy with it.
 - No special library
 - No magic
 - Raw image can be run on qenu
-- provides partial in-house libc io interface for user mode. It means that you can port your simple program to run on Ostoy32.
+- provides partial in-house libc interface for user mode. It means that you can port your simple ansi-C program to run on Ostoy32.
 - Provides IRQ, Time-tick, keyboard, VGA
 - No user mode , kernel mode only
 - No memory management
