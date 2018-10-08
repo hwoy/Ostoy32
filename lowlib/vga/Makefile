@@ -28,14 +28,10 @@ disablecursor.o: disablecursor.c ../../include/vga.h ../../include/asm.h \
 get_cur.o: get_cur.c ../../include/vga.h ../../include/asm.h \
  ../../include/stdint.h
 get_pix.o: get_pix.c ../../include/vga.h
-kputc.o: kputc.c ../../include/vga.h ../../include/asm.h \
- ../../include/stdint.h
-kputs.o: kputs.c ../../include/vga.h ../../include/asm.h \
- ../../include/stdint.h
-pix.o: pix.c ../../include/vga.h ../../include/asm.h \
- ../../include/stdint.h
-scrollup.o: scrollup.c ../../include/vga.h ../../include/asm.h \
- ../../include/stdint.h
+kputc.o: kputc.c ../../include/vga.h
+kputs.o: kputs.c ../../include/vga.h
+pix.o: pix.c ../../include/vga.h
+scrollup.o: scrollup.c ../../include/vga.h
 set_bg.o: set_bg.c ../../include/vga.h
 set_cur.o: set_cur.c ../../include/vga.h ../../include/asm.h \
  ../../include/stdint.h

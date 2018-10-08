@@ -1,5 +1,4 @@
-#include "vga.h"
-#include "asm.h"
+#include <vga.h>
 
 
 void pix(unsigned int x,unsigned int y,unsigned short bg,unsigned short fg,char ch)

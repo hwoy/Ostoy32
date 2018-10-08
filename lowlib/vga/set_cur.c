@@ -1,5 +1,5 @@
-#include "vga.h"
-#include "asm.h"
+#include <vga.h>
+#include <asm.h>
 
 
 unsigned int set_cur(unsigned int x,unsigned int y)

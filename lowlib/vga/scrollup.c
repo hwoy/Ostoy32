@@ -1,6 +1,4 @@
-#include "vga.h"
-#include "asm.h"
-
+#include <vga.h>
 
 void scrollup(unsigned int nrow)
 {
