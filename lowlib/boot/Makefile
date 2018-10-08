@@ -3,8 +3,8 @@ include ../../Makefile.lib.in
 
 CFLAGS += -D_SYSCALL_
 
-listc = get_driveno.c
 listo = get_driveno.o
+
 LIBNAME =libboot.a
 
 .PHONY: all clean install update
@@ -12,12 +12,6 @@ LIBNAME =libboot.a
 all:	$(LIBNAME) 
 $(LIBNAME):	$(listo)
 	$(AR) -rc $(LIBNAME)  $(listo)
-
-$(listo): $(listc)
-	$(CC) -c $(CFLAGS)    $(listc)
-	
-get_char.s: get_char.c
-	$(CC) -S $(CFLAGS) get_char.c
 
 install: all
 		cp *.a ../
@@ -27,3 +21,9 @@ update:
 
 clean:	
 	rm -f *.o *.a *~ 
+
+make-dep:
+	$(MAKE) -MM $(CFLAGS) *.c
+
+
+get_driveno.o: get_driveno.c ../../include/stdint.h ../../include/boot.h

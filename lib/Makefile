@@ -1,5 +1,5 @@
 include ../Makefile.in
-.PHONY: all clean install update
+.PHONY: all clean install update ar-list
 
 all:
 		$(MAKE) -C cpuid && \
@@ -19,5 +19,5 @@ $(MAKE) -C conio install
 update:
 		$(MAKE) clean && $(MAKE) install
 	
-ar-list.txt: install
-	$(AR) -t *.a > ar-list.txt
+ar-list: install
+	ls *.a | xargs -I{} $(AR) -t {}

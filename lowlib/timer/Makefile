@@ -3,21 +3,16 @@ include ../../Makefile.lib.in
 
 CFLAGS += -D_SYSCALL_
 
-listc = delay.c get_timetick.c
+
 listo = delay.o get_timetick.o
+
 LIBNAME =libtimer.a
 
-.PHONY: all clean install update
+.PHONY: all clean install update make-dep
 
 all:	$(LIBNAME) 
 $(LIBNAME):	$(listo)
 	$(AR) -rc $(LIBNAME)  $(listo)
-
-$(listo): $(listc)
-	$(CC) -c $(CFLAGS)    $(listc)
-	
-get_char.s: get_char.c
-	$(CC) -S $(CFLAGS) get_char.c
 
 install: all
 		cp *.a ../
@@ -27,3 +22,9 @@ update:
 
 clean:	
 	rm -f *.o *.a *~ 
+
+make-dep:
+	$(MAKE) -MM $(CFLAGS) *.c
+
+delay.o: delay.c ../../include/timer.h
+get_timetick.o: get_timetick.c ../../include/timer.h

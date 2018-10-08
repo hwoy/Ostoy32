@@ -1,19 +1,15 @@
 include ../../Makefile.in
 include ../../Makefile.lib.in
 
-listc = cpuid.c  getcpuextstr.c  getcpustr.c
 listo = cpuid.o  getcpuextstr.o  getcpustr.o
+
 LIBNAME =libcpuid.a
 
-.PHONY: all clean install update obj
+.PHONY: all clean install update make-dep
 
 all:	$(LIBNAME)
-$(LIBNAME):	obj
+$(LIBNAME):	$(listo)
 	$(AR) -rc $(LIBNAME)  $(listo)
-
-obj: $(listc)
-	$(CC) -c $(CFLAGS)    $(listc)
-	
 
 
 install: all
@@ -24,3 +20,10 @@ update:
 
 clean:	
 	rm -f *.o *.a *~ 
+
+make-dep:
+	$(MAKE) -MM $(CFLAGS) *.c
+
+cpuid.o: cpuid.c ../../include/cpuid.h
+getcpuextstr.o: getcpuextstr.c ../../include/cpuid.h
+getcpustr.o: getcpustr.c ../../include/cpuid.h

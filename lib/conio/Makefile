@@ -1,20 +1,15 @@
 include ../../Makefile.in
 include ../../Makefile.lib.in
 
-
-listc = clrscr.c  gotoxy.c  _setcursortype.c  textbackground.c  textcolor.c  wherex.c  wherey.c getch.c getche.c
 listo = clrscr.o  gotoxy.o  _setcursortype.o  textbackground.o  textcolor.o  wherex.o  wherey.o getch.o getche.o
+
 LIBNAME =libconio.a
 
-.PHONY: all clean install update obj
+.PHONY: all clean install update make-dep
 
 all:	$(LIBNAME)
-$(LIBNAME):	obj
+$(LIBNAME):	$(listo)
 	$(AR) -rc $(LIBNAME)  $(listo)
-
-obj: $(listc)
-	$(CC) -c $(CFLAGS)    $(listc)
-	
 
 
 install: all
@@ -25,3 +20,20 @@ update:
 
 clean:	
 	rm -f *.o *.a *~ 
+
+make-dep:
+	$(MAKE) -MM $(CFLAGS) *.c
+
+_setcursortype.o: _setcursortype.c ../../include/conio.h \
+ ../../include/vga.h
+clrscr.o: clrscr.c ../../include/conio.h ../../include/vga.h
+getch.o: getch.c ../../include/conio.h ../../include/stdint.h \
+ ../../include/kb.h
+getche.o: getche.c ../../include/conio.h ../../include/stdint.h \
+ ../../include/stdio.h ../../include/kb.h
+gotoxy.o: gotoxy.c ../../include/conio.h ../../include/vga.h
+textbackground.o: textbackground.c ../../include/conio.h \
+ ../../include/vga.h
+textcolor.o: textcolor.c ../../include/conio.h ../../include/vga.h
+wherex.o: wherex.c ../../include/conio.h ../../include/vga.h
+wherey.o: wherey.c ../../include/conio.h ../../include/vga.h
