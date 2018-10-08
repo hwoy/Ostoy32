@@ -1,5 +1,5 @@
-*.hdd
-*.img
+./*.hdd
+./*.img
 *.o
 *~
 *.bin
