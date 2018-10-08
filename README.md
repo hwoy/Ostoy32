@@ -2,7 +2,7 @@
 
 Port [Slider game](https://github.com/hwoy/slider) to Ostoy32 on QEMU
 
-[Download](https://raw.githubusercontent.com/hwoy/Ostoy32/master/img/Ostoy32.img)
+[Download](https://raw.githubusercontent.com/hwoy/Ostoy32/master/img/Ostoy32.img) Ostoy32 image for QEMU
 
 # What is an Ostoy32
 Ostoy32 is a simple and small 32 bits operating sysytem. 
