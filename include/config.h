@@ -1,16 +1,12 @@
 #ifndef __CONFIG_H__
 #define __CONFIG_H__
 
-#For MBR
 	#define FLOPPY 0x00
 	#define HARDDISK 0x80
 	#define SP 0x7c00
 	#define KERN 0x7c00
 	#define VBR_ADDR 0x061b
-#DRIVE=0x80 for primary IDE Drive	
-#DRIVE=0x00 for primary Floppy disk Drive
-	
-#For init
+
 	#define STACK_ADDR 0x200000
 	#define INIT_ADDR 0x300000
 	#define APP_ADDR 0x400000

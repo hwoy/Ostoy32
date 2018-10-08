@@ -1,6 +1,8 @@
 #ifndef __KB_H__
 #define __KB_H__
 
+#include <stdint.h>
+
 enum KYBRD_ENCODER_IO {
  
 	KYBRD_ENC_INPUT_BUF	=	0x60,

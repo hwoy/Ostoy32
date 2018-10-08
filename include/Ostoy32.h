@@ -15,7 +15,7 @@ typedef struct sreg32
     unsigned int edx;
     unsigned int esi;
     unsigned int edi;
-}__attribute__((packed)) SREG32;
+}SREG32;
 
 unsigned int scall(SREG32 *reg);
 
