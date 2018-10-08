@@ -22,7 +22,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 cpuid.o: cpuid.c ../../include/cpuid.h
 getcpuextstr.o: getcpuextstr.c ../../include/cpuid.h

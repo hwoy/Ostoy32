@@ -22,7 +22,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 _setcursortype.o: _setcursortype.c ../../include/conio.h \
  ../../include/vga.h

@@ -24,7 +24,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 abs.o: abs.c ../../include/stdlib.h
 atoi.o: atoi.c ../../include/stdlib.h

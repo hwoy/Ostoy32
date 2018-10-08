@@ -21,7 +21,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 disablecursor.o: disablecursor.c ../../include/vga.h ../../include/asm.h \
  ../../include/stdint.h

@@ -24,7 +24,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 delay.o: delay.c ../../include/timer.h
 get_timetick.o: get_timetick.c ../../include/timer.h

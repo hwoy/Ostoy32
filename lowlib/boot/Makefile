@@ -23,7 +23,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 
 get_driveno.o: get_driveno.c ../../include/stdint.h ../../include/boot.h

@@ -27,7 +27,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 get_char.o: get_char.c ../../include/stdint.h ../../include/kb.h
 kybrd_ctrl_read_status.o: kybrd_ctrl_read_status.c ../../include/asm.h \

@@ -26,7 +26,7 @@ clean:
 	rm -f *.o *.a *~ 
 
 make-dep:
-	$(MAKE) -MM $(CFLAGS) *.c
+	$(CC) -MM $(CFLAGS) *.c
 
 
 delay.o: delay.c ../../include/Ostoy32.h ../../include/stdint.h \
