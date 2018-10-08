@@ -9,7 +9,7 @@ $(MAKE) -C conio
 clean:	
 		$(MAKE) -C cpuid clean && \
 $(MAKE) -C libc clean && \
-$(MAKE) -C conio clean && rm -rf *.a
+$(MAKE) -C conio clean && rm -rf *.a *.txt
 
 install: all
 		$(MAKE) -C cpuid install && \
@@ -19,3 +19,5 @@ $(MAKE) -C conio install
 update:
 		$(MAKE) clean && $(MAKE) install
 	
+ar-list.txt: install
+	(AR) -t *.a > ar-list.txt
