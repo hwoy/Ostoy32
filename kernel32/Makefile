@@ -11,7 +11,7 @@ LDFLAGS = -L../lib -L../lowlib -Llib -Llib/kprintf -nostdlib
 
 INITIP = init.c pic_install.c idt_install.c isr_entry.c
 
-LIB=-lkpf -lc -lconio -lvga -lkb -lboot -ltimer
+LIB=-lkpf -lc -lconio -lvga -lkb -lboot -ltimer -lasm
 
 .PHONY: all clean lib
 

@@ -17,7 +17,7 @@
 	
 	#define APP_NSECT 16
 	#define SETUP_NSECT 1
-	#define INIT_NSECT 15
+	#define INIT_NSECT 16
 	#define MBR_NSECT 1
 	
 	#define ALL_NSECT (MBR_NSECT+SETUP_NSECT+INIT_NSECT+APP_NSECT)

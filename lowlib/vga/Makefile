@@ -9,14 +9,11 @@ LIBNAME =libvga.a
 .PHONY: all clean install update obj
 
 all:	$(LIBNAME) 
-$(LIBNAME):	$(listo) asm.o
-	$(AR) -rc $(LIBNAME)  $(listo) asm.o
+$(LIBNAME):	$(listo)
+	$(AR) -rc $(LIBNAME)  $(listo)
 
 $(listo): $(listc)
 	$(CC) -c $(CFLAGS)    $(listc)
-	
-asm.o: asm.s
-	$(AS) -o asm.o asm.s
 
 install: all
 		cp *.a ../

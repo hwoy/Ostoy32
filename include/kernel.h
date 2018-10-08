@@ -1,7 +1,7 @@
 /* Skelix by Xiaoming Mo (skelixos@gmail.com)
  * Licence: GPLv2 */
-#ifndef KERNEL_H
-#define KERNEL_H
+#ifndef __KERNEL_H__
+#define __KERNEL_H__
 
 
 /* code selector in gdt */
@@ -33,8 +33,6 @@
 #define HD0_SIZE	(4*8)
 
 #define PAGE_DIR	(IDT_ADDR+(((HD0_ADDR+HD0_SIZE-IDT_ADDR)-1)/PAGE_SIZE+1)*PAGE_SIZE)
-#ifndef __KERNEL_H__
-#define __KERNEL_H__
 
 #define PAGE_SIZE	(4*1024)
 #define PAGE_TABLE	(PAGE_DIR+PAGE_SIZE)
@@ -54,5 +52,5 @@
 extern unsigned long long *gdt;
 extern unsigned long long *ldt;
 */
-#endif
+
 #endif

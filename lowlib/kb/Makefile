@@ -11,16 +11,14 @@ LIBNAME =libkb.a
 .PHONY: all clean install update
 
 all:	$(LIBNAME) 
-$(LIBNAME):	$(listo) asm.o
-	$(AR) -rc $(LIBNAME)  $(listo) asm.o
+$(LIBNAME):	$(listo)
+	$(AR) -rc $(LIBNAME)  $(listo)
 
 $(listo): $(listc)
 	$(CC) -c $(CFLAGS)    $(listc)
 	
 get_char.s: get_char.c
 	$(CC) -S $(CFLAGS) get_char.c
-asm.o: asm.s
-	$(AS) -o asm.o asm.s
 
 install: all
 		cp *.a ../

@@ -30,12 +30,12 @@ pln(void) {
 		/*30*/{'b', 'B'}, {'n', 'N'}, {'m', 'M'}, {',', '<'},
 		/*34*/{'.', '>'}, {'/', '?'}, {0x0, 0x0}, {'*', '*'},
 		/*38*/{0x0, 0x0}, {' ', ' '} };
-	if (scan_code & 0x80)
-		return;
-/*	
-		putchar(key_map[scan_code&0x7f][shf_p]);
-*/
+	
+	if (!(scan_code & 0x80))
+	{
 		last_char=key_map[scan_code&0x7f][shf_p];
+	}
+
 }
 
 /* Ctrl */
@@ -68,8 +68,8 @@ unp(void) {
 
 void
 do_kb(void) {
-	int com;
-	void (*key_way[0x80])(void) = {
+
+	static void (*key_way[0x80])(void) = {
 		/*00*/unp, unp, pln, pln, pln, pln, pln, pln,
 		/*08*/pln, pln, pln, pln, pln, pln, pln, pln,
 		/*10*/pln, pln, pln, pln, pln, pln, pln, pln,
@@ -87,7 +87,8 @@ do_kb(void) {
 		/*70*/unp, unp, unp, unp, unp, unp, unp, unp,
 		/*78*/unp, unp, unp, unp, unp, unp, unp, unp,
 	};
-	com = 0;
+
+	int com;
 
 	scan_code = inportb(0x60);
 	(*key_way[scan_code&0x7f])();
@@ -98,7 +99,3 @@ do_kb(void) {
 	outportb(0x20, 0x20);
 }
 
-void
-kb_install(void) {
-	outportb(inportb(0x21)&0xfd, 0x21);
-}

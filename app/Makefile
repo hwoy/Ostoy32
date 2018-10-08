@@ -1,6 +1,6 @@
 include ../Makefile.in
 
-LIB=-lconio -lc -lcpuid -lOstoy32
+LIB=-lconio -lc -lcpuid -lOstoy32 -lasm
 
 INCLUDEDIR = -I../include
 

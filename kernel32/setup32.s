@@ -91,16 +91,10 @@ int_step_2:
 	
 	xorl %eax,%eax
 	movb driveno,%al
-	
 	pushl %eax
 	call INIT_ADDR
-	call  APP_ADDR
 	
-	#xorl %edx,%edx
-	#movl $1,%eax
-	
-	#xorl %ecx,%ecx
-	#idivl %ecx
+	call APP_ADDR
 	
 	2:
 hlt
