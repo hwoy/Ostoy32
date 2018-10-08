@@ -1,14 +1,14 @@
 #include <string.h>
 void *memcpy(void *des,const void *src,unsigned int count)
 {
-  void *tmp;
-  char *cdes,*csrc;
-  cdes=(char *)des;
-  csrc=(char *)src;
-  tmp=des;
+
+  unsigned char *cdes,*csrc;
+  cdes=(unsigned char *)des;
+  csrc=(unsigned char *)src;
+
 	while(count--)
 	{
 		*cdes++=*csrc++;
 	}
-  return(tmp);
+  return des;
 }

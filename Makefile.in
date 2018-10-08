@@ -1,3 +1,4 @@
+########## Edit for your system but this project for x86 32 bits ############
 OBJTYPE=elf_i386_sol2
 ARTARGET=elf32-i386-sol2
 
@@ -6,10 +7,6 @@ ARTARGET=elf32-i386-sol2
 #elf_i386 = linux
 
 
-
-
-
-########## Edit for your system but this project for x86 32 bits ############
 STD=c99
 #c89 = ANSI c
 #c99 = ISO c99 (**** recomended for more features ****)
@@ -37,10 +34,8 @@ LD=$(LINKER)
 AR=$(ARCHIVER)
 MAKE=$(BUILDER)
 
-CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -Werror -ffreestanding #-Wno-long-long  
-CFLAGS += -fomit-frame-pointer
+CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -ffreestanding
+CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables
 
 
-#If don't success, Try below
-#CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -Werror  -nostdlib -nostdinc -fomit-frame-pointer -fno-asynchronous-unwind-tables -fno-builtin
 #CFLAGS = "-march=i386  -mpreferred-stack-boundary=2"

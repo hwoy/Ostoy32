@@ -1,13 +1,11 @@
 #include <string.h>
 void  *smemset(void *des,char ch,unsigned int count)
 {
-  void *tmp;
-  char *cdes;
-  cdes=(char *)des;
-  tmp=des;
+  unsigned char *cdes;
+  cdes=(unsigned char *)des;
+
     while(count--)
-  {
     *cdes++=ch;
-  }
-  return(tmp);
+    
+  return des;
 }
