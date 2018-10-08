@@ -20,4 +20,4 @@ update:
 		$(MAKE) clean && $(MAKE) install
 	
 ar-list.txt: install
-	(AR) -t *.a > ar-list.txt
+	$(AR) -t *.a > ar-list.txt
