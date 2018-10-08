@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/hwoy/Ostoy32/master/res/Ostoy32.png" />
+![](https://raw.githubusercontent.com/hwoy/Ostoy32/master/res/Ostoy32.png?raw=true)
 
 [Download](https://raw.githubusercontent.com/hwoy/Ostoy32/master/img/Ostoy32.img)
 
