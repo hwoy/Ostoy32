@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/hwoy/Ostoy32/master/res/Ostoy32.png" />
+
 # What is an Ostoy32
 Ostoy32 is a simple and small 32 bits operating sysytem. 
 It has been written in C99 and few Assembly code. 
