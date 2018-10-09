@@ -20,6 +20,10 @@ void init(uint8_t driveno)
 	
 	
 	setclr();
+
+	set_bg(C_GREEN,0,0,COL-1,ROW-1);
+	set_fg(C_BLACK,0,0,COL-1,ROW-1);
+
 	__asm__ volatile("sti");
 }
 
