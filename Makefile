@@ -6,7 +6,7 @@ INSTALLDIR =img
 
 QEMU="/c/Program Files/qemu/qemu-system-i386w.exe"
 
-.PHONY: all clean update install uninstall lib tools
+.PHONY: all clean update install uninstall lib tools test
 
 all:	$(BIN)
 
