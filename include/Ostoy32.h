@@ -17,7 +17,7 @@ typedef struct sreg32
     unsigned int edi;
 }SREG32;
 
-unsigned int scall(SREG32 *reg);
+unsigned int scall(const SREG32 *reg);
 
 enum syscall_function
 {
