@@ -12,4 +12,4 @@ kernel32/kernel32
 kernel32/setup32
 mbr/mbr
 *.bat
-
+Ostoy32.img

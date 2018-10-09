@@ -2,7 +2,7 @@ include Makefile.in
 
 NAME =Ostoy32
 BIN = $(NAME).img
-INSTALLDIR =/data/mae
+INSTALLDIR =img
 
 .PHONY: all clean update install uninstall lib tools
 
