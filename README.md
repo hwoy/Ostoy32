@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/hwoy/Ostoy32/master/res/Ostoy32.png?raw=true)
 
-Port [Slider game](https://github.com/hwoy/slider) to Ostoy32 on QEMU
+Port [Slider game](https://github.com/hwoy/slider) to Ostoy32 on [QEMU](https://www.qemu.org)
 
 [Download](https://raw.githubusercontent.com/hwoy/Ostoy32/master/img/Ostoy32.img) Ostoy32 image for QEMU
 
