@@ -1,0 +1,35 @@
+########## Edit for your system but this project for x86 32 bits ############
+
+STD=c99
+#c89 = ANSI c
+#c99 = ISO c99 (**** recomended for more features ****)
+
+
+OPT=-Os
+#-Os = for less size
+#-O2 = for more speed
+
+MARCH=i386
+
+
+CCOMPILER=gcc
+ASSEMBLER= $(CCOMPILER) -c -x assembler-with-cpp -Wa,--divide
+LINKER=ld
+ARCHIVER=ar
+BUILDER=make
+
+########## Edit for your system but this project for x86 32 bits ############ 
+
+CC=$(CCOMPILER)
+AS=$(ASSEMBLER)
+LD=$(LINKER)
+AR=$(ARCHIVER)
+MAKE=$(BUILDER)
+
+CFLAGS = $(OPT) -march=$(MARCH) -std=$(STD) -Wall -pedantic -ffreestanding
+CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables
+
+
+#CFLAGS = "-march=i386  -mpreferred-stack-boundary=2"
+
+NATIVECC=gcc		# for compile tools to native executable file
