@@ -1,6 +1,6 @@
 #include <kprintf.h>
 #include <stdarg.h>
-#include <conio.h>
+#include <vga.h>
 #include "putnum.h"
 
 
@@ -13,8 +13,8 @@ unsigned int i,count;
 		unsigned short fg;
 		unsigned short bg;
 	} KPL[] = {
-		{LIGHTGRAY, BLACK},
-		{YELLOW, RED},
+		{C_LIGHTGRAY, C_BLACK},
+		{C_YELLOW, C_RED},
 	};
 	
 va_list args;

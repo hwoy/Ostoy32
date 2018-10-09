@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <whitespace.h>
 #include <vga.h>
 #include <kprintf.h>
 

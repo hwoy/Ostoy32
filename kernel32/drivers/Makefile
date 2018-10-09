@@ -2,7 +2,7 @@ include ../../Makefile.in
 .PHONY: all clean install update ar-list
 
 clean:
-	$(MAKE) -C vga clean && clean && $(MAKE) -C kb clean && $(MAKE) -C boot clean && $(MAKE) -C timer clean && $(MAKE) -C asm clean &&\
+	$(MAKE) -C vga clean  && $(MAKE) -C kb clean && $(MAKE) -C boot clean && $(MAKE) -C timer clean && $(MAKE) -C asm clean &&\
 	rm -rf *.a *.txt
 
 install: all

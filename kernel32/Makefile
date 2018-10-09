@@ -6,12 +6,12 @@ INCLUDEDIR = -I../include -Iinclude
 
 ASFLAGS=$(INCLUDEDIR)
 
-LDFLAGS = -L../lib -Ldrivers -Llib -Llib/kprintf -nostdlib
+LDFLAGS = -Ldrivers -Llib -L../lib -nostdlib
 
 
 INITIP = init.c pic_install.c idt_install.c isr_entry.c
 
-LIB=-lkpf -lc -lconio -lvga -lkb -lboot -ltimer -lasm
+LIB=-lkpf -lc -lvga -lkb -lboot -ltimer -lasm
 
 .PHONY: all clean lib drivers
 
@@ -54,14 +54,15 @@ syscall/syscall.a:
 	$(MAKE) -C syscall
 
 lib:
-	$(MAKE) -C lib
+	$(MAKE) -C lib install
 
 drivers:
 	$(MAKE) -C drivers install
 
 clean:
 	rm -f  $(BIN) setup32  *.o $ *.map *~ init32 *.bin && \
-$(MAKE) -C init clean && $(MAKE) -C isr clean && $(MAKE) -C kb clean && $(MAKE) -C timer clean && $(MAKE) -C syscall clean && $(MAKE) -C lib clean
+$(MAKE) -C init clean && $(MAKE) -C isr clean && $(MAKE) -C kb clean && \
+$(MAKE) -C timer clean && $(MAKE) -C syscall clean && $(MAKE) -C lib clean && $(MAKE) -C drivers clean
 
 
 

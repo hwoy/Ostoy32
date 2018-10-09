@@ -23,8 +23,7 @@ app/app: lib
 	
 clean:
 	rm -f $(BIN) *~ && $(MAKE) -C mbr clean  && $(MAKE) -C kernel32 clean && \
-	$(MAKE) -C app clean && $(MAKE) -C lib clean && \
-	$(MAKE) -C   clean && $(MAKE) -C tools clean && $(MAKE) -C tools clean
+	$(MAKE) -C app clean && $(MAKE) -C lib clean && $(MAKE) -C tools clean
 
 lib:  
 	$(MAKE) -C lib install

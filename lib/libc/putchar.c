@@ -1,5 +1,6 @@
 #include <vga.h>
 #include <stdio.h>
+#include <whitespace.h>
 
 
 static void putnl(void);
