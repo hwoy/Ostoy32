@@ -1,11 +1,4 @@
 ########## Edit for your system but this project for x86 32 bits ############
-OBJTYPE=elf_i386_sol2
-ARTARGET=elf32-i386-sol2
-
-#elf_i386_sol2 = solaris
-#elf_i386_fbsd = freebsd
-#elf_i386 = linux
-
 
 STD=c99
 #c89 = ANSI c
@@ -16,15 +9,14 @@ OPT=-Os
 #-Os = for less size
 #-O2 = for more speed
 
-BIT=32
-ARCH=i386
+MARCH=i386
 
 
-CCOMPILER=gcc -m$(BIT)
+CCOMPILER=i686-vityan-linux-gnu-gcc
 ASSEMBLER= $(CCOMPILER) -c -x assembler-with-cpp -Wa,--divide
-LINKER=gld -m $(OBJTYPE)
-ARCHIVER= gar --target=$(ARTARGET)
-BUILDER=gmake
+LINKER=i686-vityan-linux-gnu-ld
+ARCHIVER=i686-vityan-linux-gnu-ar
+BUILDER=make
 
 ########## Edit for your system but this project for x86 32 bits ############ 
 
@@ -34,7 +26,7 @@ LD=$(LINKER)
 AR=$(ARCHIVER)
 MAKE=$(BUILDER)
 
-CFLAGS = $(OPT) -march=$(ARCH) -std=$(STD) -Wall -pedantic -ffreestanding
+CFLAGS = $(OPT) -march=$(MARCH) -std=$(STD) -Wall -pedantic -ffreestanding
 CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables
 
 

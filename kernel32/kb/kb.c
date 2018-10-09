@@ -1,7 +1,6 @@
 /* Skelix by Xiaoming Mo (skelixos@gmail.com)
  * Licence: GPLv2 */
 #include <asm.h>
-#include <stdio.h>
 
 volatile char last_char=-1;
 

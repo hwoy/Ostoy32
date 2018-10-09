@@ -1,4 +1,6 @@
-.globl outportb,inportb
+.globl outportb
+.globl inportb
+
 .text
 outportb:
 enter $0,$0

@@ -20,7 +20,7 @@ void init(uint8_t driveno)
 	
 	
 	setclr();
-		__asm__ volatile("sti");
+	__asm__ volatile("sti");
 }
 
 
