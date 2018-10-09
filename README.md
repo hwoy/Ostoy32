@@ -37,7 +37,7 @@ builder:        make (GNU make)
 
 ### Tools for building Ostoy32
 
-- Shell: git-bash from  Git for Windows(*) / Mingw32 / Msys2
+- Shell: git-bash from  Git for Windows(*) / Mingw32 / Msys2 / cmd.exe
 - Toolchain: [mingw](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20NonWin/vityan/linux-ubuntu-natty_i686-bin_x86_64-mingw_20101218_vityan.7z/download) host=win64 target=i686-linux-elf(*)
 - You can compile in easier way on linux
 - Virtual machine: [QEMU](https://www.qemu.org)(*)
