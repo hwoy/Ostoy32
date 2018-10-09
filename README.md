@@ -25,7 +25,7 @@ I hope that you may enjoy with it.
 
 ```s
 Host: Windows 64 bits(*) / unix-like os 
-Target: i386 32 bits PC machine.
+Target: i386-linux PC machine.
 
 compiler:       gcc or clang
 assembler:      as (GNU as)
@@ -37,10 +37,10 @@ builder:        make (GNU make)
 
 ### Tools for building Ostoy32
 
-- Shell: bit-bash from  Git for Windows(*) / Mingw32 / Msys2
+- Shell: git-bash from  Git for Windows(*) / Mingw32 / Msys2
 - Toolchain: [mingw](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20NonWin/vityan/linux-ubuntu-natty_i686-bin_x86_64-mingw_20101218_vityan.7z/download) host=win64 target=i686-linux-elf(*)
 - You can compile in easier way on linux
-- Virtual machine: QEMU(*)
+- Virtual machine: [QEMU](https://www.qemu.org)(*)
 - (*) == Implement for my project
 
 ### Thanks

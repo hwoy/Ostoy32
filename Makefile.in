@@ -31,3 +31,5 @@ CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables
 
 
 #CFLAGS = "-march=i386  -mpreferred-stack-boundary=2"
+
+NATIVECC=gcc		# for compile tools to native executable file
