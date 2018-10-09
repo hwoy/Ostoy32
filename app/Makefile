@@ -1,12 +1,12 @@
 include ../Makefile.in
 
-LIB=-lconio -lc -lcpuid -lOstoy32 -lasm
+LIB=-lc -lOstoy32
 
 INCLUDEDIR = -I../include
 
-ASFLAGS=-I../include
+ASFLAGS=-I../kernel32/include
 
-LDFLAGS = -L../lib -L../lowlib -nostdlib
+LDFLAGS = -L../lib -nostdlib
 
 CFLAGS += $(INCLUDEDIR)
 

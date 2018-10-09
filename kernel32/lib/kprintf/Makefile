@@ -1,6 +1,6 @@
 include ../../../Makefile.in
 
-LIBDIR =-L../../../lib -L../../../lowlib
+LIBDIR =-L../../../lib -L../../drivers
 
 INCLUDEDIR =-I../../../include -I../../include
 

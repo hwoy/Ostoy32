@@ -1,5 +1,5 @@
-include ../../Makefile.in
-include ../../Makefile.lib.in
+include ../../../Makefile.in
+include ../../../Makefile.klib.in
 
 CFLAGS += -D_SYSCALL_
 
@@ -25,6 +25,7 @@ clean:
 
 make-dep:
 	$(CC) -MM $(CFLAGS) *.c
+
 
 delay.o: delay.c ../../include/timer.h
 get_timetick.o: get_timetick.c ../../include/timer.h

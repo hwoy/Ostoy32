@@ -1,9 +1,9 @@
 include ../../Makefile.in
 
-LIBDIR = -L../../lib -L../lib
-INCLUDEDIR = -I../../include -I../include
+LIBDIR = -L../lib -L../drivers
+INCLUDEDIR = -I../include
 
-LDFLAGS = -L$(LIBDIR) -nostdlib
+LDFLAGS = $(LIBDIR) -nostdlib
 
 CFLAGS += $(INCLUDEDIR)
 

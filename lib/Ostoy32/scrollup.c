@@ -1,5 +1,5 @@
-#include "vga.h"
-#include "asm.h"
+#include <Ostoy32.h>
+
 
 
 void scrollup(unsigned int nrow)

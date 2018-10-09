@@ -1,5 +1,5 @@
-include ../../Makefile.in
-include ../../Makefile.lib.in
+include ../../../Makefile.in
+include ../../../Makefile.klib.in
 
 CFLAGS += -D_SYSCALL_
 
@@ -26,4 +26,5 @@ make-dep:
 	$(CC) -MM $(CFLAGS) *.c
 
 
-get_driveno.o: get_driveno.c ../../include/stdint.h ../../include/boot.h
+get_driveno.o: get_driveno.c ../../../include/stdint.h \
+ ../../include/boot.h

@@ -1,5 +1,5 @@
-include ../../Makefile.in
-include ../../Makefile.lib.in
+include ../../../Makefile.in
+include ../../../Makefile.klib.in
 
 
 CFLAGS += -D_SYSCALL_
@@ -29,12 +29,13 @@ clean:
 make-dep:
 	$(CC) -MM $(CFLAGS) *.c
 
-get_char.o: get_char.c ../../include/stdint.h ../../include/kb.h
+
+get_char.o: get_char.c ../../../include/stdint.h ../../include/kb.h
 kybrd_ctrl_read_status.o: kybrd_ctrl_read_status.c ../../include/asm.h \
- ../../include/stdint.h ../../include/kb.h
+ ../../../include/stdint.h ../../include/kb.h
 kybrd_ctrl_send_cmd.o: kybrd_ctrl_send_cmd.c ../../include/asm.h \
- ../../include/stdint.h ../../include/kb.h
+ ../../../include/stdint.h ../../include/kb.h
 kybrd_enc_read_buf.o: kybrd_enc_read_buf.c ../../include/asm.h \
- ../../include/stdint.h ../../include/kb.h
+ ../../../include/stdint.h ../../include/kb.h
 kybrd_enc_send_cmd.o: kybrd_enc_send_cmd.c ../../include/asm.h \
- ../../include/stdint.h ../../include/kb.h
+ ../../../include/stdint.h ../../include/kb.h

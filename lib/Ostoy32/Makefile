@@ -62,13 +62,18 @@ pix.o: pix.c ../../include/Ostoy32.h ../../include/stdint.h \
 scall.o: scall.c ../../include/Ostoy32.h ../../include/stdint.h \
  ../../include/vga.h ../../include/kb.h ../../include/boot.h \
  ../../include/timer.h
-scrollup.o: scrollup.c ../../include/vga.h ../../include/asm.h \
- ../../include/stdint.h
-set_bg.o: set_bg.c ../../include/vga.h
+scrollup.o: scrollup.c ../../include/Ostoy32.h ../../include/stdint.h \
+ ../../include/vga.h ../../include/kb.h ../../include/boot.h \
+ ../../include/timer.h
+set_bg.o: set_bg.c ../../include/Ostoy32.h ../../include/stdint.h \
+ ../../include/vga.h ../../include/kb.h ../../include/boot.h \
+ ../../include/timer.h
 set_cur.o: set_cur.c ../../include/Ostoy32.h ../../include/stdint.h \
  ../../include/vga.h ../../include/kb.h ../../include/boot.h \
  ../../include/timer.h
 set_cursize.o: set_cursize.c ../../include/Ostoy32.h \
  ../../include/stdint.h ../../include/vga.h ../../include/kb.h \
  ../../include/boot.h ../../include/timer.h
-set_fg.o: set_fg.c ../../include/vga.h
+set_fg.o: set_fg.c ../../include/Ostoy32.h ../../include/stdint.h \
+ ../../include/vga.h ../../include/kb.h ../../include/boot.h \
+ ../../include/timer.h

@@ -1,6 +1,6 @@
 include ../Makefile.in
 
-ASFLAGS=-I"../include"
+ASFLAGS=-I"../include" -I../kernel32/include
 
 .PHONY: all clean
 

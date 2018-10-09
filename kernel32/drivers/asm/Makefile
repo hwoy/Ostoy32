@@ -1,5 +1,5 @@
-include ../../Makefile.in
-include ../../Makefile.lib.in
+include ../../../Makefile.in
+include ../../../Makefile.klib.in
 
 LIBNAME =libasm.a
 

@@ -1,13 +1,13 @@
 include ../../Makefile.in
 LIB=syscall
 
-LIBDIR = ../../lib
-INCLUDEDIR = ../../include
+LIBDIR = -L../lib -L../drivers
+INCLUDEDIR = -I../include
 
-LDFLAGS = -L$(LIBDIR) -nostdlib
-ASFLAGS = -I$(INCLUDEDIR)
+LDFLAGS = $(LIBDIR) -nostdlib
+ASFLAGS = $(INCLUDEDIR)
 
-CFLAGS += -I$(INCLUDEDIR)
+CFLAGS += $(INCLUDEDIR)
 
 .PHONY: all clean
 

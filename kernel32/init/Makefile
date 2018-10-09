@@ -1,12 +1,12 @@
 include ../../Makefile.in
 LIBNAME=init
 
-LIBDIR = ../../LIBNAME
-INCLUDEDIR = ../../include
+LIBDIR = -L../lib -L../drivers
+INCLUDEDIR = -I../include
 
-LDFLAGS = -L$(LIBDIR) -nostdLIBNAME
+LDFLAGS = $(LIBDIR) -nostdLIBNAME
 
-CFLAGS += -I$(INCLUDEDIR)
+CFLAGS += $(INCLUDEDIR)
 
 .PHONY: all clean
 
