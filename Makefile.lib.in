@@ -1,6 +1,6 @@
 
 
-LIBDIR =-L../../lib -L../../lowlib
+LIBDIR =-L../../lib
 
 INCLUDEDIR =-I../../include
 

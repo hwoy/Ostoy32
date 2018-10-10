@@ -27,7 +27,7 @@ AR=$(ARCHIVER)
 MAKE=$(BUILDER)
 
 CFLAGS = $(OPT) -march=$(MARCH) -std=$(STD) -Wall -pedantic -ffreestanding
-CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables
+CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables -nostdinc
 
 
 #CFLAGS = "-march=i386  -mpreferred-stack-boundary=2"

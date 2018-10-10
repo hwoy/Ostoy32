@@ -2,9 +2,9 @@ include ../../Makefile.in
 LIBNAME=init
 
 LIBDIR = -L../lib -L../drivers
-INCLUDEDIR = -I../include
+INCLUDEDIR = -I../include -I../../include
 
-LDFLAGS = $(LIBDIR) -nostdLIBNAME
+LDFLAGS = $(LIBDIR) -nostdlib
 
 CFLAGS += $(INCLUDEDIR)
 
