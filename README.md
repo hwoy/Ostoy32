@@ -45,6 +45,14 @@ builder:        make (GNU make)
 - You can compile in easier way on linux
 - (*) == Implement for my project
 
+### How to make
+
+```sh
+
+$ make
+
+```
+
 ### Thanks
 Inspired by
 
