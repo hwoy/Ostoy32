@@ -37,11 +37,11 @@ builder:        make (GNU make)
 
 ### Tools for building Ostoy32
 
-- Shell: Git-bash from  [Git for Windows](https://git-scm.com/download/win)(*) / Mingw32 / Msys2 / cmd.exe
-- Toolchain: [Mingw-w64 toolchains](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20NonWin/vityan/linux-ubuntu-natty_i686-bin_x86_64-mingw_20101218_vityan.7z/download)(*) Host=win64, Target=i686-linux-elf
-- Virtual machine: [QEMU](https://www.qemu.org)(*)
+- (**Shell:**) Git-bash from  [Git for Windows](https://git-scm.com/download/win)(*) / Mingw32 / Msys2 / cmd.exe
+- (**Toolchain:**) [Mingw-w64 toolchains](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20NonWin/vityan/linux-ubuntu-natty_i686-bin_x86_64-mingw_20101218_vityan.7z/download)(*) Host=win64, Target=i686-linux-elf
+- (**Virtual machine:**) [QEMU](https://www.qemu.org)(*)
 - Native Compiler: [Mingw-w64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/) for compling tools (**Optional**)
-- Builder: GNU make for Windows that comes with Native Compiler Mingw-w64
+- (**Builder:**) GNU make for Windows that comes with Native Compiler Mingw-w64
 - You can compile in easier way on linux
 - (*) == Implement for my project
 
