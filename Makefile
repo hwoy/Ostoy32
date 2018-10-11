@@ -19,10 +19,7 @@ mbr/mbr:
 	
 kernel32/kernel32: lib  
 	$(MAKE) -C kernel32
-	
-	
-app/app: lib  
-	$(MAKE) -C app
+
 	
 clean:
 	rm -f $(BIN) *~ && $(MAKE) -C mbr clean  && $(MAKE) -C kernel32 clean && \
@@ -45,6 +42,12 @@ uninstall:
 
 run: $(BIN)
 	$(QEMU) -drive file=$(BIN),format=raw
+
+
+######################## Application ######################## 
+
+app/app: lib  
+	$(MAKE) -C app
 
 cppapp/app: lib
 	$(MAKE) -C cppapp
