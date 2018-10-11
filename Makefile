@@ -23,7 +23,7 @@ kernel32/kernel32: lib
 	
 clean:
 	rm -f $(BIN) *~ && $(MAKE) -C mbr clean  && $(MAKE) -C kernel32 clean && \
-	$(MAKE) -C app clean && $(MAKE) -C lib clean && $(MAKE) -C tools clean && $(MAKE) -C cppapp clean
+	$(MAKE) -C app clean && $(MAKE) -C lib clean && $(MAKE) -C tools clean && $(MAKE) -C app-cpp clean
 
 lib:
 	$(MAKE) -C lib install
@@ -49,8 +49,8 @@ run: $(BIN)
 app/app: lib  
 	$(MAKE) -C app
 
-cppapp/app: lib
-	$(MAKE) -C cppapp
+app-cpp/app: lib
+	$(MAKE) -C app-cpp
 	
 	
 
