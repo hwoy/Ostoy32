@@ -1,4 +1,7 @@
 #include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <cstdarg>
 
 template <typename Tint>
 bool isprime(Tint num)
