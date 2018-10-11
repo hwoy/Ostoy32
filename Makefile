@@ -9,7 +9,7 @@ QEMU="/c/Program Files/qemu/qemu-system-i386w.exe"
 
 .PHONY: all clean update install uninstall lib tools run
 
-all:	$(BIN)
+all: $(BIN)
 
 $(BIN): lib mbr/mbr kernel32/kernel32  $(APP)/app
 	cat mbr/mbr kernel32/kernel32  $(APP)/app > $(BIN)
