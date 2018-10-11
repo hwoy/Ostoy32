@@ -1,0 +1,15 @@
+#ifndef __CSTRING__
+#define __CSTRING__
+
+namespace std
+{
+	#include "string.h"
+}
+
+#ifndef NULL
+#define NULL ((void *)0)
+#endif
+
+
+#endif
+

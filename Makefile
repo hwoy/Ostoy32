@@ -6,7 +6,7 @@ INSTALLDIR =img
 
 QEMU="/c/Program Files/qemu/qemu-system-i386w.exe"
 
-.PHONY: all clean update install uninstall lib tools run
+.PHONY: all clean update install uninstall lib tools run cppapp
 
 all:	$(BIN)
 
@@ -25,9 +25,9 @@ app/app: lib
 	
 clean:
 	rm -f $(BIN) *~ && $(MAKE) -C mbr clean  && $(MAKE) -C kernel32 clean && \
-	$(MAKE) -C app clean && $(MAKE) -C lib clean && $(MAKE) -C tools clean
+	$(MAKE) -C app clean && $(MAKE) -C lib clean && $(MAKE) -C tools clean && $(MAKE) -C cppapp clean
 
-lib:  
+lib:  kernel32/kernel32
 	$(MAKE) -C lib install
 
 tools:
@@ -44,6 +44,10 @@ uninstall:
 
 run: $(BIN)
 	$(QEMU) -drive file=$(BIN),format=raw
+
+cppapp: lib
+	$(MAKE) -C cppapp
+	
 	
 
 

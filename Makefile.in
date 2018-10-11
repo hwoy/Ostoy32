@@ -32,7 +32,7 @@ CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables -nostdinc
 CXX=clang++
 CXXSTD=c++11
 
-CXXFLAGS = $(OPT) -march=$(MARCH) -std=$CXXSTD) -Wall -pedantic -ffreestanding -target i686-pc-linux-gnu
+CXXFLAGS = $(OPT) -march=$(MARCH) -std=$(CXXSTD) -Wall -pedantic -ffreestanding -target i686-pc-linux-gnu
 CXXFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables -nostdinc -nostdinc++
 
 
