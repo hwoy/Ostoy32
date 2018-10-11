@@ -10,7 +10,7 @@ extern "C" {
 uint8_t get_driveno(void);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #endif

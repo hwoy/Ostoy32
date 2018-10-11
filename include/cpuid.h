@@ -38,7 +38,7 @@ char *getcpustr(cpustr strbuff);
 char *getcpuextstr(cpuextstr strbuff);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #endif

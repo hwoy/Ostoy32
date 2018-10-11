@@ -32,7 +32,7 @@ void set_cursize(unsigned char begin,unsigned char end);
 unsigned short get_pix(unsigned int x,unsigned int y);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 

@@ -9,7 +9,7 @@ int toupper(int ch);
 int tolower(int ch);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #endif

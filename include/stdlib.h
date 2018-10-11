@@ -13,7 +13,7 @@ unsigned int rand(void);
 void srand(unsigned int seed);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #define atol atoi

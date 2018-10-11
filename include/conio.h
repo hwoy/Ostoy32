@@ -43,7 +43,7 @@ int 		getch(void);
 int 		getche(void); /*requirs putchar in libc*/
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #endif

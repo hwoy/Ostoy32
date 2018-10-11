@@ -40,7 +40,7 @@ uint8_t kybrd_enc_read_buf (void);
 void kybrd_enc_send_cmd (uint8_t cmd);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #endif

@@ -16,7 +16,7 @@ char *gets(char *s);
 int getchar(void);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #ifndef NULL

@@ -28,7 +28,7 @@ int strncmp(const char *str1,const char *str2,unsigned int n);
 const char *strchr( const char *str, int ch );
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 

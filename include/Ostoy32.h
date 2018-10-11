@@ -41,7 +41,7 @@ extern "C" {
 unsigned int scall(const SREG32 *reg);
 
 #ifdef __cplusplus
-extern }
+}
 #endif
 
 #endif
