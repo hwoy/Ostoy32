@@ -27,7 +27,7 @@ clean:
 	rm -f $(BIN) *~ && $(MAKE) -C mbr clean  && $(MAKE) -C kernel32 clean && \
 	$(MAKE) -C app clean && $(MAKE) -C lib clean && $(MAKE) -C tools clean && $(MAKE) -C cppapp clean
 
-lib:  kernel32/kernel32
+lib:
 	$(MAKE) -C lib install
 
 tools:
