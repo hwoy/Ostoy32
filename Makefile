@@ -3,15 +3,16 @@ include Makefile.in
 NAME =Ostoy32
 BIN = $(NAME).img
 INSTALLDIR =img
+APP=app
 
 QEMU="/c/Program Files/qemu/qemu-system-i386w.exe"
 
-.PHONY: all clean update install uninstall lib tools run cppapp
+.PHONY: all clean update install uninstall lib tools run
 
 all:	$(BIN)
 
-$(BIN): lib mbr/mbr kernel32/kernel32  app/app
-	cat mbr/mbr kernel32/kernel32  app/app > $(BIN)
+$(BIN): lib mbr/mbr kernel32/kernel32  $(APP)/app
+	cat mbr/mbr kernel32/kernel32  $(APP)/app > $(BIN)
 
 mbr/mbr:
 	$(MAKE) -C mbr
@@ -45,7 +46,7 @@ uninstall:
 run: $(BIN)
 	$(QEMU) -drive file=$(BIN),format=raw
 
-cppapp: lib
+cppapp/app: lib
 	$(MAKE) -C cppapp
 	
 	
