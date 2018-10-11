@@ -5,7 +5,7 @@ STD=c99
 #c99 = ISO c99 (**** recomended for more features ****)
 
 
-OPT=-Os
+COPT=-Os
 #-Os = for less size
 #-O2 = for more speed
 
@@ -26,9 +26,14 @@ LD=$(LINKER)
 AR=$(ARCHIVER)
 MAKE=$(BUILDER)
 
-CFLAGS = $(OPT) -march=$(MARCH) -std=$(STD) -Wall -pedantic -ffreestanding
+CFLAGS = $(OPT) -march=$(MARCH) -std=$(CSTD) -Wall -pedantic -ffreestanding
 CFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables  -nostdinc
 
+CXX=clang++
+CXXSTD=c++11
+
+CXXFLAGS = -m$(BIT) $(OPT) -march=$(MARCH) -std=$(CXXSTD) -Wall -pedantic -ffreestanding -target i686-pc-linux-gnu
+CXXFLAGS += -fomit-frame-pointer -fno-asynchronous-unwind-tables -nostdinc -nostdinc++
 
 #CFLAGS = "-march=i386  -mpreferred-stack-boundary=2"
 
