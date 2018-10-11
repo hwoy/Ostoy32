@@ -1,6 +1,10 @@
 #ifndef __STRING_H__
 #define __STRING_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 const void* memchr( const void* ptr, int ch, unsigned int count );
 
 void *memset( void *dest, int ch, unsigned int count);
@@ -22,6 +26,10 @@ char *strcpy( char *dest, const char *src );
 int strncmp(const char *str1,const char *str2,unsigned int n);
 
 const char *strchr( const char *str, int ch );
+
+#ifdef __cplusplus
+extern }
+#endif
 
 
 #ifndef NULL

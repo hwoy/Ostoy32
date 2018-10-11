@@ -1,6 +1,10 @@
 #ifndef __VGA_H__
 #define __VGA_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 unsigned int set_cur(unsigned int x,unsigned int y);
 
 unsigned int get_cur(unsigned int *x,unsigned int *y) ;
@@ -27,6 +31,9 @@ void set_cursize(unsigned char begin,unsigned char end);
 
 unsigned short get_pix(unsigned int x,unsigned int y);
 
+#ifdef __cplusplus
+extern }
+#endif
 
 
 #define ROW 25

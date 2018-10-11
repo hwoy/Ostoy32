@@ -24,6 +24,10 @@ enum COLORS {
     WHITE
 };
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 unsigned int          wherex( void );
 unsigned int          wherey( void );
 
@@ -38,5 +42,8 @@ void         _setcursortype( int __cur_t );
 int 		getch(void);
 int 		getche(void); /*requirs putchar in libc*/
 
+#ifdef __cplusplus
+extern }
+#endif
 
 #endif

@@ -28,11 +28,19 @@ enum KYBRD_CTRL_STATS_MASK {
 	KYBRD_CTRL_STATS_MASK_PARITY	=	0x80
 };
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int get_char(void);
 
 uint8_t kybrd_ctrl_read_status (void);
 void kybrd_ctrl_send_cmd (uint8_t cmd);
 uint8_t kybrd_enc_read_buf (void);
 void kybrd_enc_send_cmd (uint8_t cmd);
+
+#ifdef __cplusplus
+extern }
+#endif
 
 #endif

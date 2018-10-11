@@ -17,7 +17,6 @@ typedef struct sreg32
     unsigned int edi;
 }SREG32;
 
-unsigned int scall(const SREG32 *reg);
 
 enum syscall_function
 {
@@ -34,5 +33,15 @@ enum syscall_function
     sys_delay,\
     sys_get_timetick\
 };
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+unsigned int scall(const SREG32 *reg);
+
+#ifdef __cplusplus
+extern }
+#endif
 
 #endif

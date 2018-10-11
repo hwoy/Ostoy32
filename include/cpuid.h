@@ -24,13 +24,21 @@ REG16 r16;
 REG32 r32;
 }REG;
 
+typedef char cpuextstr[4*4*3+1];
+typedef char cpustr[13];
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 REG *cpuid(unsigned int mode , REG *reg);
 
-typedef char cpustr[13];
 char *getcpustr(cpustr strbuff);
 
-typedef char cpuextstr[4*4*3+1];
 char *getcpuextstr(cpuextstr strbuff);
+
+#ifdef __cplusplus
+extern }
+#endif
 
 #endif
