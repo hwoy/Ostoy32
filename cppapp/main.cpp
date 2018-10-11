@@ -14,7 +14,7 @@ bool isprime(Tint num)
 extern "C"
 int main()
 {
-    for(unsigned int num=1;num<=100;++num)
+    for(unsigned int num=1;num<=1000000;++num)
     if(isprime(num)) std::printf("%u\n",num);
 
     return 0;
