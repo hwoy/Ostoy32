@@ -9,10 +9,12 @@ str_err: .asciz  "Error sectors can't be loaded\r\n"
 cli
 xorw %ax,%ax
 movw %ax,%ds
-movw %ax,%ss
 movw %ax,%es
+
+	movw $SS,%ax
+	movw %ax,%ss
 	movw $SP,%ax
-	movw %ax,%sp	
+	movw %ax,%sp
 sti
 cld
 movw $begin_vbr,%si
