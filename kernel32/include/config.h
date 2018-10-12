@@ -3,7 +3,7 @@
 
 	#define FLOPPY 0x00
 	#define HARDDISK 0x80
-	#define SP 0x7c00
+	#define SP 0x7fffe
 	#define KERN 0x7c00
 	#define VBR_ADDR 0x061b
 
