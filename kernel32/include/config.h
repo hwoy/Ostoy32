@@ -6,7 +6,7 @@
 	#define SS 0x7fff
 	#define SP 0x0e
 	#define KERN 0x7c00
-	#define VBR_ADDR 0x061b
+	#define VBR_ADDR 0x500
 
 	#define STACK_ADDR 0x200000
 	#define INIT_ADDR 0x300000
