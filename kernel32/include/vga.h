@@ -60,6 +60,18 @@ enum VGACOLORS
     C_WHITE
 };
 
+enum VGA_BGCOLORS
+{
+    BGC_BLACK,
+    BGC_BLUE,
+    BGC_GREEN,
+    BGC_CYAN,
+    BGC_RED,
+    BGC_MAGENTA,
+    BGC_BROWN,
+    BGC_LIGHTGRAY
+};
+
 #define BLINK (1<<7)
 
 #endif
