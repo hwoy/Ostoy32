@@ -13,7 +13,7 @@ void pix(unsigned int x,unsigned int y,unsigned short bg,unsigned short fg,char 
 
 void scrollup(unsigned int nrow);
 
-void disablecursor(int bool);
+void disablecursor(int _bool);
 
 
 void kputs(const char *str,unsigned int x,unsigned int y);
@@ -65,6 +65,18 @@ enum VGACOLORS
     C_LIGHTMAGENTA,
     C_YELLOW,
     C_WHITE
+};
+
+enum VGA_BGCOLORS
+{
+    BGC_BLACK,
+    BGC_BLUE,
+    BGC_GREEN,
+    BGC_CYAN,
+    BGC_RED,
+    BGC_MAGENTA,
+    BGC_BROWN,
+    BGC_LIGHTGRAY
 };
 
 #define BLINK (1<<7)

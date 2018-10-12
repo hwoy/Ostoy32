@@ -2,13 +2,13 @@
 #include <asm.h>
 
 
-void disablecursor(int bool)
+void disablecursor(int _bool)
 {
 	unsigned char tmp;
 	
 	outportb(0xa,0x3d4);
 	tmp=inportb(0x3d5);
-	if(bool)
+	if(_bool)
 	{
 		tmp|=(1<<5);
 	}
