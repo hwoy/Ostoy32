@@ -8,9 +8,9 @@
 	#define KERN 0x7c00
 	#define VBR_ADDR 0x500
 
-	#define STACK_ADDR 0x200000
-	#define INIT_ADDR 0x300000
-	#define APP_ADDR 0x400000
+	#define STACK_ADDR 0x800000
+	#define INIT_ADDR  0x300000
+	#define APP_ADDR   0x400000
 	
 	#define APP_NSECT 16
 	#define SETUP_NSECT 1
